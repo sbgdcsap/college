@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Attendance Entry Form</title>
+</head>
+<body>
+<form action="branchsematt.php" method="post">
+<table>
+<tr>
+<td>Enter Acedemic Year:
+<td><select name="ay">
+  <option>Select Acedemic Year</option>
+  <option value="1819">2018-2019</option>
+  <option value="1920">2019-2020</option>
+  <option value="2021">2020-2021</option>
+  <option value="2122">2021-2022</option>
+</select>
+</tr>
+<tr>
+<td>Enter Branch:
+<td><select name="branch">
+   <option>Select Branch</option>
+  <option value="bsccs">B.Sc(CS)</option>
+  <option value="bcomrestm">B.Com(RES)(TM)</option>
+  <option value="bcomresem">B.Com(RES)(EM)</option>
+  <option value="bscchem">B.Sc(CHEM)</option>
+</select>
+</tr>
+<tr>
+<td>Enter Year:
+<td><select name="year">
+   <option>Select Year</option>
+  <option value="1">I Year</option>
+  <option value="2">II Year</option>
+  <option value="3">III Year</option>
+</select>
+</tr>
+<tr>
+<td>Enter Sem:
+<td><select name="sem">
+  <option>Select Sem</option>
+  <option value="1">I SEM</option>
+  <option value="2">II SEM</option>
+ </select>
+</tr>
+<tr>
+<td><input type="submit" value="Get Students Data"></input></td>
+<td><input type="hidden" name="check" value="1"></input></td></tr>
+</table>
+</body>
+</html>

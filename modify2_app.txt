@@ -1,0 +1,30 @@
+<?php
+$my=mysqli_connect("localhost","root","","sbg");
+$fn=$_POST['fname'];
+$ln=$_POST['lname'];
+$dn=$_POST['date'];
+$mn=$_POST['month'];
+$yn=$_POST['year'];
+
+$ofn=$_POST['ofn'];
+$oln=$_POST['oln'];
+$old=$_POST['old'];
+$olm=$_POST['olm'];
+$oly=$_POST['oly'];
+
+$q="delete from applicationform where fname='$ofn';
+$rv=mysqli_query($my,$q);
+$q="insert into applicationform values('$fn','$ln','$dn','$mn','$yn')";
+$rv=mysqli_query($my,$q);
+
+
+if($rv)
+{
+echo "Updated Successfully";
+ }
+else
+{
+echo "RECORD NOT FOUND <a href='res.html' > CLICK HERE</A>";
+}
+
+?>

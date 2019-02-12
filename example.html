@@ -1,0 +1,57 @@
+
+<html > 
+  <head> 
+    <script type="text/javascript">
+  var monthLists = new Array(4) 
+ monthLists["empty"] = ["Select a month"]; 
+ monthLists["1"] = ["June", "July", "August","September", "October", "November"]; 
+ monthLists["2"] = ["December", "January", "February","March", "April", "May"]; 
+  
+ function monthChange(selectObj) { 
+
+ var idx = selectObj.selectedIndex; 
+
+ var which = selectObj.options[idx].value; 
+
+ cList = monthLists[which]; 
+ 
+ var cSelect = document.getElementById("month"); 
+
+ var len=cSelect.options.length; 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
+ var newOption; 
+ 
+ for (var i=0; i<cList.length; i++) { 
+ newOption = document.createElement("option"); 
+ newOption.value = cList[i];  
+ newOption.text=cList[i]; 
+}
+ try { 
+ cSelect.add(newOption);  
+ } 
+ catch (e) { 
+ cSelect.appendChild(newOption); 
+ } 
+ } 
+ } 
+//]]>
+</script>
+</head>
+<body>
+  <noscript>This page requires JavaScript be available and enabled to function properly</noscript>
+  <h1>Dynamic Select Statements</h1>
+  <label for="sem">Select sem</label>
+  <select id="sem" onchange="monthChange(this);">
+    <option value="empty">Select a sem</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+      </select>
+  <br/>
+  <label for="month">Select a month</label>
+  <select id="month">
+    <option value="0">Select a month</option>
+  </select>
+</body>
+ </html>

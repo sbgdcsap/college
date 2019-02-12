@@ -1,0 +1,12 @@
+<html>
+<head>
+<title> Attendance Entry Form</title>
+</head>
+<body>
+<form action="attendance.php" action="post">
+Enter Acedemic Year:<select name="ay">
+  <option value="1819">2018-2019</option>
+  <option value="1920">2019-2020</option>
+  <option value="2021">2020-2021</option>
+  <option value="2122">2021-2022</option>
+</select>
